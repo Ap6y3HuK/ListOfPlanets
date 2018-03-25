@@ -1,0 +1,30 @@
+<app-header-of-planets></app-header-of-planets>
+<input type="text" class="name-input" #inputName (keyup)="searchPlanet(inputName.value)" placeholder="write name">
+<div class="size-management">
+  <label>Set size of page: </label>
+  <a *ngFor="let amount of labelsOfQuantity" [ngClass]="{'highlight': amountOfElements === amount}"
+     [class.page-size]="amountOfElements !== amount" (click)="changeSizeOfPage(amount)">{{amount}}
+  </a>
+</div>
+<ul>
+  <li *ngFor="let planet of planets$ | async | paginate: { itemsPerPage: amountOfElements, currentPage: pageNumber}">
+    <a class="row-container" routerLink="/planets/{{planet.url | slice:29:-1}}">
+      <div class="row-cell">
+        <p>{{planet.name}}</p>
+      </div>
+      <div class="row-cell">
+        <p>{{planet.rotation_period}}</p>
+      </div>
+      <div class="row-cell">
+        <p>{{planet.orbital_period}}</p>
+      </div>
+      <div class="row-cell">
+        <p>{{planet.diameter}}</p>
+      </div>
+      <div class="row-cell">
+        <p>{{planet.surface_water}}</p>
+      </div>
+    </a>
+  </li>
+</ul>
+<pagination-controls [maxSize]="13" (pageChange)="pageNumber = $event"></pagination-controls>

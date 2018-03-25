@@ -1,0 +1,19 @@
+<div *ngIf="planet">
+  <button  class="back-button" (click)="goBack()">go back</button>
+  <div class="container-data">
+    <p class="box-data"><span>Name:</span> {{planet.name}}</p>
+    <p class="box-data"><span>Rotation period:</span> {{planet.rotation_period}}</p>
+    <p class="box-data"><span>Orbital period:</span> {{planet.orbital_period}}</p>
+    <p class="box-data"><span>Diameter:</span> {{planet.diameter}}</p>
+    <p class="box-data"><span>Climate:</span> {{planet.climate}}</p>
+    <p class="box-data"><span>Gravity:</span> {{planet.gravity}}</p>
+    <p class="box-data"><span>Terrain:</span> {{planet.terrain}}</p>
+    <p class="box-data"><span>Surface water:</span> {{planet.surface_water}}</p>
+    <p class="box-data"><span>Population:</span> {{planet.population}}</p>
+    <p class="box-data"><span>Residents:</span> {{planet.residents}}</p>
+    <p class="box-data"><span>films:</span> {{planet.films}}</p>
+    <p class="box-data"><span>Created:</span> {{planet.created | date: 'yyyy/MM/dd'}}</p>
+    <p class="box-data"><span>Edited:</span> {{planet.edited | date: 'yyyy/MM/dd'}}</p>
+    <p class="box-data"><span>Url:</span> {{planet.url}}</p>
+  </div>
+</div>

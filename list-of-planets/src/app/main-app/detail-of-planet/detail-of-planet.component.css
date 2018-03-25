@@ -1,0 +1,38 @@
+.back-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  transition-duration: 0.6s;
+}
+
+.back-button:hover {
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+.box-data {
+  float: left;
+  text-align: justify;
+  padding: 10px;
+  background: #d8d8d8;
+  color: black;
+  margin: 5px;
+  width: 190px;
+  min-height: 80px;
+  max-height: 190px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  word-wrap: normal;
+  word-break: break-all;
+}
+
+.box-data span {
+  font-weight: bold;
+}
